@@ -1,0 +1,15 @@
+C:\Users\dell\projects\weather-monitoring\obj\Debug\net9.0\weather-monitoring.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dell\projects\weather-monitoring\obj\Debug\net9.0\weather-monitoring.AssemblyInfoInputs.cache
+C:\Users\dell\projects\weather-monitoring\obj\Debug\net9.0\weather-monitoring.AssemblyInfo.cs
+C:\Users\dell\projects\weather-monitoring\obj\Debug\net9.0\weather-monitoring.csproj.CoreCompileInputs.cache
+C:\Users\dell\projects\weather-monitoring\obj\Debug\net9.0\weather-monitoring.sourcelink.json
+C:\Users\dell\projects\weather-monitoring\bin\Debug\net9.0\weather-monitoring.exe
+C:\Users\dell\projects\weather-monitoring\bin\Debug\net9.0\weather-monitoring.deps.json
+C:\Users\dell\projects\weather-monitoring\bin\Debug\net9.0\weather-monitoring.runtimeconfig.json
+C:\Users\dell\projects\weather-monitoring\bin\Debug\net9.0\weather-monitoring.dll
+C:\Users\dell\projects\weather-monitoring\bin\Debug\net9.0\weather-monitoring.pdb
+C:\Users\dell\projects\weather-monitoring\obj\Debug\net9.0\weather-monitoring.dll
+C:\Users\dell\projects\weather-monitoring\obj\Debug\net9.0\refint\weather-monitoring.dll
+C:\Users\dell\projects\weather-monitoring\obj\Debug\net9.0\weather-monitoring.pdb
+C:\Users\dell\projects\weather-monitoring\obj\Debug\net9.0\weather-monitoring.genruntimeconfig.cache
+C:\Users\dell\projects\weather-monitoring\obj\Debug\net9.0\ref\weather-monitoring.dll
