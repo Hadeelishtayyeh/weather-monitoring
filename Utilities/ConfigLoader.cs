@@ -1,17 +1,18 @@
-using System.Text.Json;
-using System.IO;
+using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
+
 public static class ConfigLoader
 {
     public static Dictionary<string, BotConfig> LoadConfig(string path)
     {
-        string json = File.ReadAllText(path);
-        
-        var options = new JsonSerializerOptions
-        {
-            PropertyNameCaseInsensitive = true
-        };
+        var configuration = new ConfigurationBuilder()
+            .SetBasePath(Directory.GetCurrentDirectory())
+            .AddJsonFile(path, optional: false, reloadOnChange: false)
+            .Build();
 
-        return JsonSerializer.Deserialize<Dictionary<string, BotConfig>>(json, options)!;
+        var botConfigs = new Dictionary<string, BotConfig>();
+        configuration.Bind(botConfigs); 
+
+        return botConfigs;
     }
 }

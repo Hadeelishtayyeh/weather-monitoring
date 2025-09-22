@@ -1,18 +1,12 @@
-public class RainBot  : IWeatherBot
+public class RainBot : WeatherBot
 {
-    private readonly BotConfig _config;
+    public RainBot(BotConfig config) : base(config) {}
 
-    public RainBot (BotConfig config)
-    {
-        _config = config;
-    }
-
-    public void CheckAndActivate(WeatherData data)
+    public override void CheckAndActivate(WeatherData data)
     {
         if (_config.Enabled && data.Humidity > _config.HumidityThreshold)
         {
-            Console.WriteLine("RainBot activated!");
-            Console.WriteLine($"RainBot: \"{_config.Message}\"");
+            ActivateBot("RainBot");
         }
     }
 }
