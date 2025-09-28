@@ -3,29 +3,30 @@ using System.Collections.Generic;
 
 public class WeatherDataParsingStrategy
 {
-    private readonly List<IWeatherDataParser> _parsers;
+    private IWeatherDataParser _parser;
 
-    public WeatherDataParsingStrategy(IEnumerable<IWeatherDataParser> parsers)
+    public WeatherDataParsingStrategy(IWeatherDataParser parser)
     {
-        _parsers = new List<IWeatherDataParser>(parsers);
+        _parser = parser;
+    }
+
+    public void SetParser(IWeatherDataParser parser)
+    {
+        _parser = parser;
     }
 
     public WeatherData? Parse(string input)
     {
-        foreach (var parser in _parsers)
+        try
         {
-            if (parser.CanParse(input))
+            if (_parser.CanParse(input))
             {
-                try
-                {
-                    return parser.Parse(input);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Error parsing data with {parser.GetType().Name}: {ex.Message}");
-                    return null;
-                }
+                return _parser.Parse(input);
             }
+        }
+        catch
+        {
+            return null;
         }
 
         return null;

@@ -12,11 +12,10 @@ public class JsonWeatherDataParser : IWeatherDataParser
         try
         {
             return JsonSerializer.Deserialize<WeatherData>(input)
-                   ?? throw new JsonException("Deserialized object is null.");
+            ?? throw new JsonException("Deserialized object is null.");
         }
         catch (JsonException ex)
         {
-            Console.WriteLine($"JSON parsing failed: {ex.Message}");
             throw new FormatException("Invalid JSON format for WeatherData.", ex);
         }
     }

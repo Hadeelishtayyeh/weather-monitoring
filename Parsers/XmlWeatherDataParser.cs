@@ -19,7 +19,6 @@ public class XmlWeatherDataParser : IWeatherDataParser
         }
         catch (InvalidOperationException ex)
         {
-            Console.WriteLine($"XML parsing failed: {ex.Message}");
             throw new FormatException("Invalid XML format for WeatherData.", ex);
         }
     }
